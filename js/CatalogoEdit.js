@@ -1,5 +1,5 @@
 //--------------------------------------------- 1) Definir Las Variables Correspondintes---------------------------------------------
-var input14_RENGLON_011 = new Array ("-",
+var Puesto_o_Servicio_RENGLON_011 = new Array ("-",
 "011-ASESOR PROFESIONAL ESPECIALIZADO II",
 "011-ASESOR PROFESIONAL ESPECIALIZADO IV",
 "011-ASISTENTE PROFESIONAL I",
@@ -122,7 +122,7 @@ var input14_RENGLON_011 = new Array ("-",
 "011-TRABAJADOR ESPECIALIZADO III 4 HRS",
 "011-TRABAJADOR ESPECIALIZADO III 6 HRS",);
 
-var input14_RENGLON_021 = new Array ("-", 
+var Puesto_o_Servicio_RENGLON_021 = new Array ("-", 
 "021-ANALISTA DE CONTABILIDAD",
 "021-ANALISTA DE PRESUPUESTO",
 "021-ENCARGADO DE COMPRAS",
@@ -165,7 +165,7 @@ var input14_RENGLON_021 = new Array ("-",
 "021-PROFESIONAL EN INGENIERÍA ELÉCTRICA",
 "021-PROFESIONAL EN INGENIERÍA SANITARIA");
 
-var input14_RENGLON_022 = new Array ("-",
+var Puesto_o_Servicio_RENGLON_022 = new Array ("-",
 "022-DIRECTOR EJECUTIVO I",
 "022-DIRECTOR EJECUTIVO II",
 "022-OFICINISTA IV",
@@ -177,7 +177,7 @@ var input14_RENGLON_022 = new Array ("-",
 "022-TRABAJADOR ESPECIALIZADO II");
 
 
-var input14_RENGLON_031 = new Array ("-", 
+var Puesto_o_Servicio_RENGLON_031 = new Array ("-", 
 "031-ALBAÑIL I",
 "031-AUXILIAR DE BODEGA",
 "031-AUXILIAR DE OPERACIÓN DE ",
@@ -240,45 +240,45 @@ var input14_RENGLON_031 = new Array ("-",
 "031-TRABAJADOR  VIVANDERA",
 "031-TRABAJADOR DE MANTENIMIENTO DE TELECOMUNICACIONES I");
 
-var input14_RENGLON_029 = new Array ("-", 
+var Puesto_o_Servicio_RENGLON_029 = new Array ("-", 
 "029-SERVICIOS TÉCNICOS", 
 "029-SERVICIOS PROFESIONALES");
 
-var input14_RENGLON_036 = new Array ("NO APLICA");
+var Puesto_o_Servicio_RENGLON_036 = new Array ("NO APLICA");
 
-var input14_RENGLON_081 = new Array ("-",
+var Puesto_o_Servicio_RENGLON_081 = new Array ("-",
 "081-SERVICIOS TÉCNICOS", 
 "081-SERVICIOS PROFESIONALES");
 
-var input14_RENGLON_181 = new Array ("NO APLICA");
+var Puesto_o_Servicio_RENGLON_181 = new Array ("NO APLICA");
 
-var input14_RENGLON_182 = new Array ("-", 
+var Puesto_o_Servicio_RENGLON_182 = new Array ("-", 
 "182-SERVICIOS TÉCNICOS", 
 "182-SERVICIOS PROFESIONALES");
 
-var input14_RENGLON_183 = new Array ("-", 
+var Puesto_o_Servicio_RENGLON_183 = new Array ("-", 
 "183-SERVICIOS TÉCNICOS", 
 "183-SERVICIOS PROFESIONALES");
 
-var input14_RENGLON_184 = new Array ("-", 
+var Puesto_o_Servicio_RENGLON_184 = new Array ("-", 
 "184-SERVICIOS TÉCNICOS", 
 "184-SERVICIOS PROFESIONALES");
 
-var input14_RENGLON_185 = new Array ("-", 
+var Puesto_o_Servicio_RENGLON_185 = new Array ("-", 
 "185-SERVICIOS TÉCNICOS", 
 "185-SERVICIOS PROFESIONALES");
 
-var input14_RENGLON_186 = new Array ("-", 
+var Puesto_o_Servicio_RENGLON_186 = new Array ("-", 
 "186-SERVICIOS TÉCNICOS", 
 "186-SERVICIOS PROFESIONALES");
 
-var input14_RENGLON_187 = new Array ("NO APLICA");
+var Puesto_o_Servicio_RENGLON_187 = new Array ("NO APLICA");
 
-var input14_RENGLON_188 = new Array ("-", 
+var Puesto_o_Servicio_RENGLON_188 = new Array ("-", 
 "188-SERVICIOS TÉCNICOS", 
 "188-SERVICIOS PROFESIONALES");
 
-var input14_RENGLON_189 = new Array ("-", 
+var Puesto_o_Servicio_RENGLON_189 = new Array ("-", 
 "189-SERVICIOS TÉCNICOS", 
 "189-SERVICIOS PROFESIONALES");
 
@@ -292,15 +292,15 @@ function cambia(){
     //se chequea si la "cosa" esta definida
     if(input13!=0){
         //selecionamos las cosas Correctas
-        mis_opts=eval("input14_" + input13);
+        mis_opts=eval("Puesto_o_Servicio_" + input13);
         //se calcula el numero de cosas
         num_opts=mis_opts.length;
         //marco el numero de opt en el select
-        document.myForm.input14.length = num_opts;
+        document.myForm.Puesto_o_Servicio.length = num_opts;
         //para cada opt del array, la pongo en el select
         for(i=0; i<num_opts; i++){
-            document.myForm.input14.options[i].value=mis_opts[i];
-            document.myForm.input14.options[i].text=mis_opts[i];
+            document.myForm.Puesto_o_Servicio.options[i].value=mis_opts[i];
+            document.myForm.Puesto_o_Servicio.options[i].text=mis_opts[i];
         }
         }else{
             //si no habia ninguna opt seleccionada, elimino las cosas del select
@@ -310,7 +310,7 @@ function cambia(){
             document.myForm.opt.options[0].text="-";
         }
         //hacer un reset de las opts
-        document.myForm.input14.options[0].selected = true;
+        document.myForm.Puesto_o_Servicio.options[0].selected = true;
         
     }
 
