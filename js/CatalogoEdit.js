@@ -288,7 +288,7 @@ var input14_RENGLON_189 = new Array ("-",
 function cambia(){
     var input13;
     //Se toma el vamor de la "cosa seleccionada"
-    input13 = document.uploadForm.input13[document.uploadForm.input13.selectedIndex].value;
+    input13 = document.myForm.input13[document.myForm.input13.selectedIndex].value;
     //se chequea si la "cosa" esta definida
     if(input13!=0){
         //selecionamos las cosas Correctas
@@ -296,21 +296,21 @@ function cambia(){
         //se calcula el numero de cosas
         num_opts=mis_opts.length;
         //marco el numero de opt en el select
-        document.uploadForm.input14.length = num_opts;
+        document.myForm.input14.length = num_opts;
         //para cada opt del array, la pongo en el select
         for(i=0; i<num_opts; i++){
-            document.uploadForm.input14.options[i].value=mis_opts[i];
-            document.uploadForm.input14.options[i].text=mis_opts[i];
+            document.myForm.input14.options[i].value=mis_opts[i];
+            document.myForm.input14.options[i].text=mis_opts[i];
         }
         }else{
             //si no habia ninguna opt seleccionada, elimino las cosas del select
-            document.uploadForm.opt.length = 1;
+            document.myForm.opt.length = 1;
             //ponemos un guion en la unica opt que he dejado
-            document.uploadForm.opt.options[0].value="-";
-            document.uploadForm.opt.options[0].text="-";
+            document.myForm.opt.options[0].value="-";
+            document.myForm.opt.options[0].text="-";
         }
         //hacer un reset de las opts
-        document.uploadForm.input14.options[0].selected = true;
+        document.myForm.input14.options[0].selected = true;
         
     }
 
