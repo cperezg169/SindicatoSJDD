@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sindicato Nacional | Edición</title>
+  <!--------------------------------------------------------Funcion de Edición---------------------------------------------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!--------------------------------------------------------Diseño Exportado de Internet---------------------------------------------->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+      
+  <!--------------------------------------------------------Funciones Exportado de Internet--------------------------------------------->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      
+  <!--------------------------------------------------------Modal------------------------------------------------------>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  <!--------------------------------------------------------Otras Funciones------------------------------------------------------>      
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/Catalogo.js"></script>
+  <link href="Css/StyleRadio.css" rel="stylesheet">
+  <link href="Css/OtrosStyles.css" rel="stylesheet">
+  <link href="Css/RedesSociales.css" rel="stylesheet">
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="Logo-removebg-preview.png">
+
+</head>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+  
+  var script_url = "https://script.google.com/macros/s/AKfycbx6kkga-GPOmuiIT3K8Wuyv0rW-nRAJXLbqUZrn5uvga0Mb0xGGDBfAz0joHPZ0Y7Fc/exec";/////////////////
+  
+
+// tambah data
+  function insert_value() {
+    
+ $("#re").css("visibility","hidden");
+  document.getElementById("loader").style.visibility = "visible";
+ $('#mySpinner').addClass('spinner');
+
+ var id1= $("#id").val();
+ var nit= $("#nit").val();
+ var nombres= $("#nombres").val();
+ var apellidos= $("#apellidos").val();
+ var casada= $("#casada").val();
+ var genero= $("#genero").val();
+ var estado_civil= $("#estado_civil").val();
+ var celular= $("#celular").val();
+ var nacionalidad= $("#nacionalidad").val();
+ var email= $("#email").val();
+ var profesion_u_oficio= $("#profesion_u_oficio").val();
+ var renglon= $("#renglon").val();
+ var puesto_oficial= $("#puesto_oficial").val();
+ var fecha_afiliacion= $("#fecha_afiliacion").val();
+ var unidad_ejecutora= $("#unidad_ejecutora").val();
+ var uploadfile= $("#uploadfile").val();//////////////////
+ 
+ var url = script_url+"?callback=ctrlq&uploadfile="+uploadfile+"&unidad_ejecutora="+unidad_ejecutora+"&fecha_afiliación="+fecha_afiliación+"&puesto_oficial="+puesto_oficial+"&renglon="+renglon+"&profesion_u_oficio="+profesion_u_oficio+"&email="+email+"&nacionalidad="+nacionalidad+"&celular="+celular+"&estado_civil="+estado_civil+"&genero="+genero+"&casada="+casada+"&apellidos="+apellidos+"&nombres="+nombres+"&nit="+nit+"&id="+id1+"&action=insert";
+  
+    var request = jQuery.ajax({               
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+    });
+
+  }
+
+// perbaharui data
+  function update_value(){
+ $("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+ 
+ var id1= $("#id").val();
+ var nit= $("#nit").val();
+ var nombres= $("#nombres").val();
+ var apellidos= $("#apellidos").val();
+ var casada= $("#casada").val();
+ var genero= $("#genero").val();
+ var estado_civil= $("#estado_civil").val();
+ var celular= $("#celular").val();
+ var nacionalidad= $("#nacionalidad").val();
+ var email= $("#email").val();
+ var profesion_u_oficio= $("#profesion_u_oficio").val();
+ var renglon= $("#renglon").val();
+ var puesto_oficial= $("#puesto_oficial").val();
+ var fecha_afiliacion= $("#fecha_afiliacion").val();
+ var unidad_ejecutora= $("#unidad_ejecutora").val();
+ var uploadfile= $("#uploadfile").val();//////////////////
+ 
+ var url = script_url+"?callback=ctrlq&uploadfile="+uploadfile+"&unidad_ejecutora="+unidad_ejecutora+"&fecha_afiliacion="+fecha_afiliacion+"&puesto_oficial="+puesto_oficial+"&renglon="+renglon+"&profesion_u_oficio="+profesion_u_oficio+"&email="+email+"&nacionalidad="+nacionalidad+"&celular="+celular+"&estado_civil="+estado_civil+"&genero="+genero+"&casada="+casada+"&apellidos="+apellidos+"&nombres="+nombres+"&nit="+nit+"&id="+id1+"&action=update";
+ 
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+    });
+
+    Swal.fire({
+                    type: 'success',
+                    titleText: 'Modificación Éxitosa',
+                    confirmButtonText: 'OK',
+                    allowEscapeKey: true,
+                    html: ('Se <b style="color:green;">guardo</b> correctamente la información'),
+                    })
+
+  }
+
+//hapus data
+  function delete_value(){
+ $("#re").css("visibility","hidden");
+     document.getElementById("loader").style.visibility = "visible";
+  
+ $('#mySpinner').addClass('spinner');
+ var id1= $("#id").val();
+ var nit= $("#nit").val();
+ var nombres= $("#nombres").val();
+ var apellidos= $("#apellidos").val();
+ var casada= $("#casada").val();
+ var genero= $("#genero").val();
+ var estado_civil= $("#estado_civil").val();
+ var celular= $("#celular").val();
+ var nacionalidad= $("#nacionalidad").val();
+ var email= $("#email").val();
+ var profesion_u_oficio= $("#profesion_u_oficio").val();
+ var renglon= $("#renglon").val();
+ var puesto_oficial= $("#puesto_oficial").val();
+ var fecha_afiliacion= $("#fecha_afiliacion").val();
+ var unidad_ejecutora= $("#unidad_ejecutora").val();
+ var uploadfile= $("#uploadfile").val();//////////////////
+ 
+ var url = script_url+"?callback=ctrlq&uploadfile="+uploadfile+"&unidad_ejecutora="+unidad_ejecutora+"&fecha_afiliacion="+fecha_afiliacion+"&puesto_oficial="+puesto_oficial+"&renglon="+renglon+"&profesion_u_oficio="+profesion_u_oficio+"&email="+email+"&nacionalidad="+nacionalidad+"&celular="+celular+"&estado_civil="+estado_civil+"&genero="+genero+"&casada="+casada+"&apellidos="+apellidos+"&nombres="+nombres+"&nit="+nit+"&id="+id1+"&action=delete";
+
+    var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+    });
+
+
+    Swal.fire({
+                    type: 'success',
+                    titleText: 'Eliminación Éxitosa',
+                    confirmButtonText: 'OK',
+                    allowEscapeKey: true,
+                    html: ('Se <b style="color:green;">elimino</b> correctamente la información'),
+                    }).then(val => {
+                    if (val) {
+                      location.href = 'Edición.html'
+                    }
+                  });
+                  
+  }
+
+
+  // print the returned data
+  function ctrlq(e) {
+ $("#re").html(e.result);
+ $("#re").css("visibility","visible");
+ read_value('');
+  }
+  
+
+
+function read_value(srch) {
+  
+    $("#re").css("visibility","hidden");
+    document.getElementById("loader").style.visibility = "visible";
+    var url = script_url+"?action=read";
+
+    $.getJSON(url, function (json) {
+ 
+// buat tabel yang menampilkan data
+  var table = document.createElement("table");
+  table.setAttribute("id", "myTable");
+  var header = table.createTHead();
+  var row = header.insertRow(0);     
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  var cell4 = row.insertCell(3);
+  var cell5 = row.insertCell(4);
+  var cell6 = row.insertCell(5);
+  var cell7 = row.insertCell(6);
+  var cell8 = row.insertCell(7);
+  var cell9 = row.insertCell(8);
+  var cell10 = row.insertCell(9);
+  var cell11 = row.insertCell(10);
+  var cell12 = row.insertCell(11);
+  var cell13 = row.insertCell(12);
+  var cell14 = row.insertCell(13);
+  var cell15 = row.insertCell(14);
+  var cell16 = row.insertCell(15);///////////////////
+ 
+  cell1.innerHTML = "<b>ID</b>";
+  cell2.innerHTML = "<b>Nit</b>";
+  cell3.innerHTML = "<b>Nombres</b>";
+  cell4.innerHTML = "<b>Apellidos</b>";
+  cell5.innerHTML = "<b>Casada</b>";
+  cell6.innerHTML = "<b>Genero</b>";
+  cell7.innerHTML = "<b>Estado Civil</b>";
+  cell8.innerHTML = "<b>Celular</b>";
+  cell9.innerHTML = "<b>Nacionalidad</b>";
+  cell10.innerHTML = "<b>Email</b>";
+  cell11.innerHTML = "<b>Profesión u Oficio</b>"
+  cell12.innerHTML = "<b>Renglon</b>";
+  cell13.innerHTML = "<b>Puesto Oficial</b>";
+  cell14.innerHTML = "<b>Fecha de Afiliación</b>";
+  cell15.innerHTML = "<b>Unidad Ejecutora</b>";
+  cell16.innerHTML = "<b>Archivo</b>";//////////////////
+        
+//        alert(json.records);
+     // masukkan data ke dalam tabel
+      if (srch!=''){
+        for (var i = 0; i < json.records.length; i++) {
+          
+          if(srch==json.records[i].ID){
+            tr = table.insertRow(-1);
+    var tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].ID;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].nit;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].nombres;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].apellidos;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].casada;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].genero;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].estado_civil;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].celular;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].nacionalidad;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].email;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].profesion_u_oficio;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].renglon;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].puesto_oficial;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].fecha_afiliacion;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].unidad_ejecutora;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].uploadfile;//////////////////
+            }
+        }
+        $("#re").html("");
+
+        Swal.fire({
+                    type: 'success',
+                    titleText: 'Información Procesada',
+                    confirmButtonText: 'OK',
+                    allowEscapeKey: true,
+                    html: ('Para cargar los datos en el sistema, por favor de <b style="color:green;">clic</b> en cualquier parte de la tabla'),
+                    });
+
+        $("#re").css("visibility","visible");
+      } else {
+         for (var i = 0; i < json.records.length; i++) {
+           
+            tr = table.insertRow(-1);
+    var tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].ID;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].nit;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].nombres;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].apellidos; 
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].casada;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].genero;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].estado_civil;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].celular;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].nacionalidad;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].email;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].profesion_u_oficio;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].renglon;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].puesto_oficial;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].fecha_afiliacion;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].unidad_ejecutora;
+    tabCell = tr.insertCell(-1);
+    tabCell.innerHTML = json.records[i].uploadfile;////////////////////////////////////
+          }
+       }
+        
+        var divContainer = document.getElementById("showData");
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table);
+        document.getElementById("loader").style.visibility = "hidden";
+     $("#re").css("visibility","visible");
+ 
+     $("#id").val("")
+     $("#nit").val("")
+     $("#nombres").val("")
+     $("#apellidos").val("")
+     $("#casada").val("")
+     $("#genero").val("")
+     $("#estado_civil").val("")
+     $("#celular").val("")
+     $("#nacionalidad").val("")
+     $("#email").val("")
+     $("#profesion_u_oficio").val("")
+     $("#renglon").val("")
+     $("#puesto_oficial").val("")
+     $("#fecha_afiliacion").val("")
+     $("#unidad_ejecutora").val("")
+     $("#uploadfile").val("")
+     getData2Input();///////////////////
+    });
+
+    if($("#myAlert").find("div#myAlert2").length==0){
+                    $("#myAlert").append("<div class='alert alert-success alert-dismissable' id='myAlert2'><i class='fa fa-check-circle' aria-hidden='true'></i> ¡CARGANDO SU INFORMACIÓN EN EL SISTEMA, ESPERE POR FAVOR!</div>");
+                    }
+                    $("#myAlert").css("display", "").fadeOut(15000);
+
+ }
+//////////// Ketika data dalam tabel diklik
+ function getData2Input(){
+  var table = document.getElementById("myTable");
+  
+  if (table) {
+    for (var i = 0; i < table.rows.length; i++) {
+      table.rows[i].onclick = function() {
+        tableText(this);   
+
+        Swal.fire({
+                    type: 'info',
+                    titleText: 'Información Cargada',
+                    confirmButtonText: 'OK',
+                    allowEscapeKey: true,
+                    html: ('Por favor, realice <b style="color:coral;">clic</b> en la sección que desea modificar'),
+                    });
+
+      }
+    }
+  }
+}
+
+///////////////////Ekstrak data dari Spreadsheet dan tampilkan di kolom.
+
+function tableText(tableRow) {
+  var id = tableRow.childNodes[0].innerHTML;
+  var nit = tableRow.childNodes[1].innerHTML;
+  var nombres = tableRow.childNodes[2].innerHTML;
+  var apellidos = tableRow.childNodes[3].innerHTML;
+  var casada = tableRow.childNodes[4].innerHTML;
+  var genero = tableRow.childNodes[5].innerHTML;
+  var estado_civil = tableRow.childNodes[6].innerHTML;
+  var celular = tableRow.childNodes[7].innerHTML;
+  var nacionalidad = tableRow.childNodes[8].innerHTML;
+  var email = tableRow.childNodes[9].innerHTML;
+  var profesion_u_oficio = tableRow.childNodes[10].innerHTML;
+  var renglon = tableRow.childNodes[11].innerHTML;
+  var puesto_oficial = tableRow.childNodes[12].innerHTML;
+  var fecha_afiliacion = tableRow.childNodes[13].innerHTML;
+  var unidad_ejecutora = tableRow.childNodes[14].innerHTML;
+  var uploadfile = tableRow.childNodes[15].innerHTML;//////////
+  $("#id").val(id)
+  $("#nit").val(nit)
+  $("#nombres").val(nombres)
+  $("#apellidos").val(apellidos)  
+  $("#casada").val(casada)
+  $("#genero").val(genero)
+  $("#estado_civil").val(estado_civil)
+  $("#celular").val(celular)
+  $("#nacionalidad").val(nacionalidad)
+  $("#email").val(email)
+  $("#profesion_u_oficio").val(profesion_u_oficio)
+  $("#renglon").val(renglon)
+  $("#puesto_oficial").val(puesto_oficial)
+  $("#fecha_afiliacion").val(fecha_afiliacion)
+  $("#unidad_ejecutora").val(unidad_ejecutora)
+  $("#uploadfile").val(uploadfile)
+  
+}   
+  </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.10/dist/sweetalert2.all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+
+
+
+</head>
+
+
+<body oncontextmenu='return false' class="antialiased sans-serif bg-gray-200">
+
+
+<script>
+        function mostrarData(){
+            document.getElementById('Seccion1').style.display = 'block';
+            document.getElementById('Seccion2').style.display = 'none';
+            document.getElementById('Seccion3').style.display = 'none';
+        }
+        function mostrarData2(){
+            document.getElementById('Seccion2').style.display = 'block';
+            document.getElementById('Seccion1').style.display = 'none';
+            document.getElementById('Seccion3').style.display = 'none';
+        }
+        function mostrarData3(){
+            document.getElementById('Seccion3').style.display = 'block';
+            document.getElementById('Seccion1').style.display = 'none';
+            document.getElementById('Seccion2').style.display = 'none';
+        }
+
+        function NewSearch(){
+            document.getElementById('Seccion1').style.display = 'none';
+            document.getElementById('Seccion2').style.display = 'none';
+            document.getElementById('Seccion3').style.display = 'none';
+        }
+</script>
+
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <input id="txtCodigo" type="hidden">
+
+  <script>
+  function valselect(){ 
+  
+  m1 = document.getElementById("srchID").value;
+  r = m1;
+  document.getElementById("txtCodigo").value = r;
+  } 
+  
+  </script>
+  
+  <script>
+    $('#btnProductoAgregar').addClass('disabled').prop('disabled', true);
+  
+  function pega() {
+    $('input[id=txtCodigo]').val("Prueb");
+    $('input[id=txtCodigo]').trigger("change");
+  }
+
+  
+  function validarbuscar(){
+  //--Validar Campo CODIGO-PRODUCTO--//
+  $('input[id=txtCodigo]').on('change', () => {
+    //Obtenemos el valor
+    var input2 = $('#txtCodigo').val();
+    //Validamos que el valor sea mayor a 7 caracteres
+    if (input2.length == 6) {
+      //Habiiltamos el botón quitando la clase 'disabled' y la propiedad 'disabled'
+      $('#btnProductoAgregar').removeClass('disabled').removeAttr('disabled');
+    } else{
+      //Volvemos a deshabilitar el botón, adicionando nuevamente la clase y propiedad 'disabled'
+      $('#btnProductoAgregar').addClass('disabled').prop('disabled', true);
+    }
+  });
+  
+  $('input[id=txtCodigo]').trigger("change");
+
+  }
+  </script>
+
+
+
+
+
+
+<div class="container">  
+<div class="py-3">	
+
+
+
+<form name="google-sheet" autocomplete="off">
+
+  <div class="row">
+    <div class="col-md-4">
+    <div class="mb-3">
+    <label for="Buscar" class="font-bold mb-1 text-gray-700 block">Buscar Registro<span style="color: rgb(255, 0, 0);"><b> *</b></span></label> 
+    <input type="text" name ="srchID" id="srchID" pattern="/^?\d+\.?\d*$/" onKeyPress="if(this.value.length==15) return false;" required minlength="15" maxlength="15"
+    class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"  onkeyup="valselect() & validarbuscar();" onclick="valselect() & validarbuscar() & NewSearch();" onchange="valselect() & validarbuscar();"
+    placeholder="Ingresar su numero de -DPI-">
+    </div>
+    </div>
+    </div>
+
+
+    <div class="row">
+    <div class="col">
+    <div class="mb-3">
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand font-bold text-gray-700 block" onclick="mostrarData();" href="#"><i class="bi bi-plus-circle-fill"></i> Datos de Identifiación</a>
+      </div>
+    </nav>
+    </div>
+    </div>
+    </div>
+
+ <!-- STEP 1 -->
+  <div id="Seccion1" class="card-body p-4 step" style="display: none">
+  <label class="text-danger mb-3"><b>Obligatorio *</b></label>
+
+  <div class="row">
+    <div class="col">
+    <div class="mb-3"> 
+        <label for="CUI" class="font-bold mb-1 text-gray-700 block">-CUI-<span style="color: rgb(255, 0, 0);"><b> *</b></span></label>
+        <input type="tel" readonly id="id" name="id" required minlength="15" maxlength="15"
+            class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
+            placeholder="0000-00000-0000" pattern="/^?\d+\.?\d*$/" onKeyPress="if(this.value.length==15) return false;">
+            <div class="invalid-feedback"><b>Campo Vacío</b></div>
+    </div>
+    </div>
+  
+  
+    <div class="col-md-6">
+    <div class="mb-3"> 
+        <label for="NIT" class="font-bold mb-1 text-gray-700 block">NIT<span style="color: rgb(255, 0, 0);"><b> *</b></span></label>
+        <input type="text" id="nit" name="nit" required required minlength="10" maxlength="10"
+            class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
+            placeholder="00000000" onkeyup="mayus(this);" onkeypress="return ((event.charCode >= 48 && event.charCode <= 57) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))">
+            <div class="invalid-feedback"><b>Campo Vacío</b></div>
+    </div>
+    </div>
+    </div>
+  
+  
+    <div class="row">
+    <div class="col">
+    <div class="mb-3"> 
+        <label for="Nombres" class="font-bold mb-1 text-gray-700 block">Nombres<span style="color: rgb(255, 0, 0);"><b> *</b></span></label>
+        <input type="text" id="nombres" name="nombres" required
+          class="nombre w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
+          placeholder="Ponga sus nombres..." onkeypress="return soloLetras(event)" pattern="/^?\d+\.?\d*$/" spellcheck="true" onkeyup="mayus(this);">
+          <div class="invalid-feedback"><b>Campo Vacío</b></div>
+    </div>
+    </div>
+  
+    <div class="col-md-6">
+    <div class="mb-3"> 
+        <label for="Apellidos" class="font-bold mb-1 text-gray-700 block">Apellidos<span style="color: rgb(255, 0, 0);"><b> *</b></span></label>
+        <input type="text" id="apellidos" name="apellidos" required
+          class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
+          placeholder="Ponga sus apellidos..." onkeypress="return soloLetras(event)" pattern="/^?\d+\.?\d*$/" spellcheck="true" onkeyup="mayus(this);">
+          <div class="invalid-feedback"><b>Campo Vacío</b></div>
+    </div>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="col-md-6">
+    <div class="mb-3"> 
+          <label for="Casada" class="font-bold mb-1 text-gray-700 block">Apellidos de Casada</label>
+          <input type="text" id="casada" name="casada"
+            class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
+            placeholder="Ponga su apellido..." onkeypress="return soloLetras(event)" pattern="/^?\d+\.?\d*$/" spellcheck="true" onkeyup="mayus(this);">
+            <div class="invalid-feedback"><b>Campo Vacío</b></div>
+    </div>
+    </div>
+
+    <div class="col">
+      <div class="mb-3">
+        <label for="Genero" class="font-bold mb-1 text-gray-700 block">Genero<span style="color: rgb(255, 0, 0);"><b> *</b></span></label>
+            <select
+            class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium" id="genero" name="genero"> 
+                  <option value='' disabled selected>-</option>
+                  <option value="MASCULINO">Masculino</option>
+                  <option value="FEMENINO">Femenino</option>  
+            </select>
+            <input style="display: none" required type="text" id="camposelect3" >
+            <div class="invalid-feedback"><b>Campo Vacío</b></div>
+      </div>
+      </div>
+      </div>
+
+      </div>
+<!-- STEP 1 -->
+
+
+<div class="row">
+  <div class="col">
+  <div class="mb-3">
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand font-bold text-gray-700 block" onclick="mostrarData2();" href="#"><i class="bi bi-plus-circle-fill"></i> Datos Personales</a>
+    </div>
+  </nav>
+  </div>
+  </div>
+  </div>
+
+<!-- STEP 2 -->
+      <div id="Seccion2" class="card-body p-4 step" style="display: none">
+      <label class="text-danger mb-3"><b>Obligatorio *</b></label>
+
+      <div class="row">
+        <div class="col">
+        <div class="mb-3">
+          <label for="EstadoCivil" class="font-bold mb-1 text-gray-700 block">Estado Civil<span style="color: rgb(255, 0, 0);"><b> *</b></span></label>
+              <select onclick="valselect2();" onchange="valselect2();" 
+              class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium" id="estado_civil" name="estado_civil"> 
+                    <option value='' disabled selected>-</option>
+                    <option value="SOLTERO">Soltero</option>
+                    <option value="CASADO">Casado</option>  
+                    <option value="UNIDO DE HECHO">Unido de Hecho</option>    
+              </select>
+              <input style="display: none" required type="text" id="camposelect2" >
+              <div class="invalid-feedback"><b>Campo Vacío</b></div>
+        </div>
+        </div>
+    
+        <div class="col-md-6">
+        <div class="mb-3">
+          <label for="Celular" class="font-bold mb-1 text-gray-700 block">Celular<span style="color: rgb(255, 0, 0);"><b> *</b></span></label>
+          <input type="tel" id="celular" name="celular" required minlength="8" placeholder="0000-0000" 
+          class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium" pattern="/^?\d+\.?\d*$/" onKeyPress="if(this.value.length==15) return false;"/> 
+          <div class="invalid-feedback"><b>Campo Vacío</b></div>
+        </div>
+        </div>
+        </div>
+
+        
+      <div class="row">
+        <div class="col-md-6">
+        <div class="mb-3">
+          <label for="Nacionalidad" class="font-bold mb-1 text-gray-700 block">Nacionalidad<span style="color: rgb(255, 0, 0);"><b> *</b></span></label>
+              <select id="nacionalidad" name="nacionalidad" onclick="valselect();" onchange="valselect();" 
+              class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium" >
+                    <option value='' disabled selected>-</option>
+                    <option value="EXTRANJERO">Extranjero</option>
+                    <option value="EXTRANJERO DOMICILIADO">Extranjero Domiciliado</option>
+                    <option value="GUATEMALTECO">Guatemalteco</option>
+              </select>
+              <input style="display: none" required type="text" id="camposelect" >
+              <div class="invalid-feedback"><b>Campo Vacío</b></div>  
+        </div>
+        </div>
+    
+      <div class="col-md-6">
+      <div class="mb-3"> 
+          <label for="Email" class="font-bold mb-1 text-gray-700 block">Correo Electrónico</label>
+          <input type="email" id="email" name="email"
+              class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
+              placeholder="example@.com">
+      </div>
+      </div>
+      </div>
+    
+      <div class="row">
+        <div class="col">
+        <div class="mb-3"> 
+              <label for="ProfesionOficio" rows="4" class="font-bold mb-1 text-gray-700 block">Profesión u Oficio<span style="color: rgb(255, 0, 0);"><b> *</b></span></label>
+              <input type="text" id="profesion_u_oficio" name="profesion_u_oficio" required class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium" placeholder="Ponga su Profesión u Oficio" onkeypress="return soloLetras(event)" id="" pattern="/^?\d+\.?\d*$/" spellcheck="true" onkeyup="mayus(this);" />
+              <div class="invalid-feedback"><b>Campo Vacío</b></div>
+        </div>
+        </div>
+        </div>
+
+</div>
+<!-- STEP 2 -->
+
+<div class="row">
+  <div class="col">
+  <div class="mb-3">
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand font-bold text-gray-700 block" onclick="mostrarData3();" href="#"><i class="bi bi-plus-circle-fill"></i> Datos de Afiliación</a>
+    </div>
+  </nav>
+  </div>
+  </div>
+  </div>
+
+
+                <!-- Bottom Navigation -->	
+                <div class="fixed bottom-0 left-0 right-0 py-3 bg-white shadow-md" x-show="step != 'complete'">
+                  <div class="max-w-3xl mx-auto px-3">
+                    <div class="center-between">
+
+                      <center>
+                      <button id="btnProductoAgregar" type="button" class="action submit w-32 focus:outline-none border border-transparent py-2 px-2 rounded-lg shadow-sm text-center text-white bg-blue-500 hover:bg-blue-600 font-medium"
+                      onclick="read_value($('#srchID').val());" value="Read Data"><i class='fa fa-search' aria-hidden='true'></i> Buscar</button>
+                      
+                      <button type="button" class="action submit w-32 focus:outline-none border border-transparent py-2 px-2 rounded-lg shadow-sm text-center text-white bg-green-500 hover:bg-green-600 font-medium"
+                      onclick="update_value();" value="Update Data"><i class='fa fa-check-circle' aria-hidden='true'></i> Guardar</button>
+              
+                      <button type="button" class="action submit w-32 focus:outline-none border border-transparent py-2 px-2 rounded-lg shadow-sm text-center text-white bg-red-500 hover:bg-red-600 font-medium"
+                      onclick="delete_value()" value="Delete Data"><i class='fa fa-trash' aria-hidden='true'></i> Eliminar</button>
+                      </center>
+
+                    </div>
+                  </div>
+                </div>
+                <!-- / Bottom Navigation https://placehold.co/300x300/e2e8f0/cccccc -->	
+
+
+                <div class="table table-sm" align="center">
+                  <!-- Memanggil loader-->
+                    <div id="showData" style="cursor: pointer;"></div>
+                    <div id="loader" style="cursor: pointer;"></div>
+                    <label id="re" class="font-bold mb-1 text-gray-700 block"></label> 
+                    <div id="showData" style="cursor: pointer;"></div>
+                </div>                
+
+                <button class="bnt-primary" type="button" onclick="getData2Input();">Editar</button>
+<pre></pre>
+<pre></pre>
+<pre></pre>
+<pre></pre>
+<pre></pre>
+
+<!---------------------------------------------Mascara de Entrada--------------------------------------------->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<script type="text/javascript">
+       $("#srchI").mask("0000-00000-0000");
+       $("#dpi").mask("0000-00000-0000");
+       $("#celular").mask("0000-00000");
+       $("#fecha_afiliacion").mask("00/00/0000");
+</script>
+
+</div>
+</div>
+
+<!-- -------------------------------Mensaje flotante------------------------------------------ -->
+<div style="text-align: just;" class="container" style="display:none;" id="myAlert">
+</div>
+
+<div style="text-align: just;" class="container" style="display:none;" id="myAlert20">
+</div>
+
+
+<style>
+#myAlert {
+width:400px;
+position:fixed;
+bottom: 100px;
+right: 10px;
+}
+
+#myAlert20 {
+width:400px;
+position:fixed;
+bottom: 100px;
+right: 10px;
+}
+
+
+.alert {
+position: relative;
+}
+
+.alert .close {
+position: absolute;
+top: 5px;
+right: 5px;
+font-size: 1em;
+}
+
+.alert .fa {
+margin-right:.3em;
+}
+</style>
+
+<!-- -------------------------------Mensaje flotante------------------------------------------ -->
+
+
+</body>
+<html>
